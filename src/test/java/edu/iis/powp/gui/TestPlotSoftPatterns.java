@@ -18,6 +18,7 @@ import edu.iis.powp.events.predefine.RectangleBuilder;
 import edu.iis.powp.events.predefine.SelectChangeVisibleOptionListener;
 import edu.iis.powp.events.predefine.SelectTestFigure2OptionListener;
 import edu.iis.powp.events.predefine.SelectTestFigureOptionListener;
+import edu.iis.powp.events.predefine.SelectTestRectangleOptionListener;
 import edu.kis.powp.drawer.panel.DefaultDrawerFrame;
 import edu.kis.powp.drawer.panel.DrawPanelController;
 
@@ -34,11 +35,11 @@ public class TestPlotSoftPatterns
 	private static void setupPresetTests(Context context) {
 	    SelectTestFigureOptionListener selectTestFigureOptionListener = new SelectTestFigureOptionListener();
 	    SelectTestFigure2OptionListener selectTestFigure2OptionListener = new SelectTestFigure2OptionListener();
-	    RectangleBuilder rectangle = new RectangleBuilder();
+	    SelectTestRectangleOptionListener rectangleFigure = new SelectTestRectangleOptionListener();
 		
 		context.addTest("Figure Joe 1", selectTestFigureOptionListener);
 		context.addTest("Figure Joe 2", selectTestFigure2OptionListener);
-		context.addTest("Rectangle", rectangle);
+		context.addTest("Rectangle", rectangleFigure);
 	}
 
 	/**
